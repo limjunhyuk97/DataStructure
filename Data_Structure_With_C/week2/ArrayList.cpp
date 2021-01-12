@@ -1,3 +1,5 @@
+// 배열 기반의 순차 리스트
+
 #include <iostream>
 #define MAX_LEN 50
 #define TRUE 1

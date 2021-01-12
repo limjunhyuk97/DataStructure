@@ -1,3 +1,5 @@
+// 배열 기반의 순차 리스트
+
 #include <stdio.h>
 #define TRUE 1
 #define FALSE 0
