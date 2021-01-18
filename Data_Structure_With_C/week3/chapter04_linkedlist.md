@@ -13,25 +13,37 @@
   - 꼬리 추가 연결리스트
     - 저장순서가 지켜진다
     - tail변수가 필요하다.
-  - 머리부분의 가장 첫번째 부분에, 아무 정보도 갖고 있지 않는 dummy node를 넣어주면 코드가 훨씬 간결해진다.
+  - 주로, 머리 부분에 추가하는 방식을 자주 이용한다.
+  - **더미노드 (dummy node)**
+    - 더미노드란? : 유효한 데이터를 지니지 않는 그냥 빈 노드를 의미한다.
+    - 사용 이유 : 처음 추가되는 노드가 두번째 노드가 되므로, 노드의 삭제, 추가, 조회의 과정을 일관되게 구현할 수 있어 코드가 간결해진다.
+    - 사용 방식
+      - 연결리스트의 연결 첫부분에 더미노드를 추가해 준다.
+      - next의 주소에 NULL이 할당되어 있는 동적할당된 노드를 생성한다.
+  - **데이터 필드, 링크 필드**
+    - 데이터 필드 : 리스트의 원소 ,즉 데이터 값을 저장하는 곳
+    - 링크 필드 : 다른 노드의 주소값을 저장하는 곳
   
-## 꼬리 추가 연결리스트
+## 더미노드 기반, 꼬리 추가 연결리스트
 
 ```cpp
 #include <stdio.h>
 #include <stdlib.h>
 
 typedef struct _node {
+
+    // 데이터 필드
 	int data;
+	
+	// 링크 필드
 	struct _node* next;
 } Node;
 
 int main(void) {
 
-
-	Node* dummy = (Node*)malloc(sizeof(Node));
-	Node* head = dummy;
-	Node* tail = dummy;
+	// 더미노드의 생성
+	Node* head = (Node *)malloc(sizeof(Node));
+	Node* tail = head;
 	Node* cur = NULL;
 
 
