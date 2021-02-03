@@ -2,4 +2,5 @@
 
 ## 코드 구성
 
- ![Calculator.pdf](https://github.com/limjunhyuk97/DataStructure_study/files/5917129/Calculator.pdf)
+![Stack_Calculator](https://user-images.githubusercontent.com/59442344/106721929-aeb97400-6648-11eb-962f-750f72608b4c.jpg)
+
