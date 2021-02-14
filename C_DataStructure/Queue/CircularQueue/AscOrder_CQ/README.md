@@ -1,1 +1,1 @@
-## Practice) Ascending order array base circular queue handling Point Data
+## Ascending order array base circular queue handling Point Data
