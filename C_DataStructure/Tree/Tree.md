@@ -8,21 +8,28 @@
    
 ## Tree 관련 용어정리   
 
-  - 노드(node)
-  - 간선(edge)
-  - 루트 노드(root node)
-  - 단말 노드(terminal node, leaf node)
-  - 내부 노드(nonterminal node, internal node)
-  - 부모(parent), 자식(child), 형제(sibling)
-  - 조상(ancestor), 후손(descendant)
-  - 레벨(level), 높이(height)
+  - **노드(node)**
+  - **간선(edge)** : 노드를 연결하는 선
+  - **루트 노드(root node)** : 부모가 없는 노드. 트리는 단 하나의 루트 노드만 갖는다.
+  - **단말 노드(terminal node, leaf node)** : 자식이 없는 노드.
+  - **내부 노드(nonterminal node, internal node)** : 노드 중 루트노드, 단말노드가 아닌 노드.
+  - **부모(parent), 자식(child), 형제(sibling) 노드**
+    - **부모 노드** : subtree 갖는 노드
+    - **자식 노드** : 부모에 속하는 부속 노드
+    - **형제 노드** : 같은 부모를 가지는 노드
+  - **조상(ancestor), 후손(descendant)**
+    - **조상** : 노드의 부모노드들의 총 집합
+    - **후손** : 노드의 subtree에 있는 모든 노드들
+  - **레벨(level), 높이(height)**
+    - **레벨** : 루트 노드로 부터의 깊이. (루트노드 = 레벨 0)
+    - **높이** : 트리에 속한 레벨의 최고 값.
   
 ## Tree의 종류   
 
-  - 이진 트리 (binary-tree)
-    - 포화 이진 트리 (Full binary-tree) : 모든 레벨의 노드들이 꽉찬 이진 트리
-    - 완전 이진 트리 (Complete binary-tree) : 모든 노드들이 위에서 아래로, 왼쪽에서 오른쪽 순서로₩ 꽉찬 이진 트리
-  - 서브 트리 (sub-tree)
+  - **이진 트리 (binary-tree)**
+    - **포화 이진 트리 (Full binary-tree)** : 모든 레벨의 노드들이 꽉찬 이진 트리
+    - **완전 이진 트리 (Complete binary-tree)** : 모든 노드들이 위에서 아래로, 왼쪽에서 오른쪽 순서로₩ 꽉찬 이진 트리
+  - **서브 트리 (sub-tree)**
   
   
   
