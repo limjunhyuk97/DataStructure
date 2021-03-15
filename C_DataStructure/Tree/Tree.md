@@ -40,6 +40,12 @@
       - all internal nodes have 2 children
       - all leaves are at the same level
       - PBT이면, CBT, FBT이다. 
+      - 
+<img src="https://user-images.githubusercontent.com/59442344/111159501-81af9800-85dc-11eb-9b52-6190849f1036.jpg" height = "38%" width = "38%">
+<img src="https://user-images.githubusercontent.com/59442344/111159504-81af9800-85dc-11eb-81ae-f2bd57b27683.jpg" height = "38%" width = "38%">
+<img src="https://user-images.githubusercontent.com/59442344/111159507-82482e80-85dc-11eb-99bd-820491ca3282.jpg" height = "38%" width = "38%">
+<img src="https://user-images.githubusercontent.com/59442344/111159495-807e6b00-85dc-11eb-92b0-097513dd796c.jpg" height = "38%" width = "38%">
+
   - **서브 트리 (sub-tree)**
     - 트리 내부에 속하는 작은 트리를 말한다.
   
