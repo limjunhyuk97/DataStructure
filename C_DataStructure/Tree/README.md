@@ -1,3 +1,4 @@
 # Tree
 
-<img src="https://github.com/limjunhyuk97/java_study/files/6227275/ExpressionTree.pdf">
+![Expression Tree](https://user-images.githubusercontent.com/59442344/112952609-a3318780-9177-11eb-837c-92bf7c1cc175.jpg)
+
