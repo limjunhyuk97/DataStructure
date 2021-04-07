@@ -17,7 +17,7 @@
 ### 2. 연결 리스트를 이용한 구현
   - 데이터의 삽입을 위해서, 연결 리스트에 저장된 모든 데이터들과 값을 비교 해야하는 상황이 발생할 수도 있다 : 마찬가지로 과다 연산
 
-### 3. 힙(heap)을 이용한 구현
+### 3. [힙(heap)을 이용한 구현](https://github.com/limjunhyuk97/DataStructure_study/blob/main/C_DataStructure/Tree/Heap/Heap.md)
   - **priority queue를 구현하기 위해서 가장 일반적으로 사용하는 자료구조**이다.
   - 데이터가 두배 증가할때마다, 연산횟수가 1 증가하므로, 과다한 연산으로 인한 부하를 방지할 수 있다.
 
