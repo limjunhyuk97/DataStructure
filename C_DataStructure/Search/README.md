@@ -9,3 +9,7 @@
 ### 3. Binary Search Tree
 
 ### 4. Hash Table
+
+### 의미있는 탐색이란 : key - value 로 묶인 모임에서 key를 바탕으로 value를 찾는 것이다.
+
+### 이때의 key는 유일한 하나의 값이어야 한다.
