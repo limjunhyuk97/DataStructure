@@ -6,4 +6,6 @@
 
 ### 2. Binary Search
 
-### 3. Hash Table
+### 3. Binary Search Tree
+
+### 4. Hash Table
