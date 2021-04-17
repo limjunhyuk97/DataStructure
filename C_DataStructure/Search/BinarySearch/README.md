@@ -5,4 +5,6 @@
 ### 순차 탐색 : O(N)
 ### 이진 탐색 : O(logN)
 
-![BSearch](https://user-images.githubusercontent.com/59442344/115107416-add88300-9fa5-11eb-9c59-7015e7c48333.png)
+## 실험결과
+
+<img src="https://user-images.githubusercontent.com/59442344/115107416-add88300-9fa5-11eb-9c59-7015e7c48333.png" width=70% height=70%>
