@@ -14,3 +14,6 @@
     - 재귀의 탈출 조건은, **탐색 시작 위치**가 **탐색 범위를 넘는 곳에 있는 경우**이다.
 
 ![68747470733a2f2f692e696d6775722e636f6d2f657567364e37312e706e67](https://user-images.githubusercontent.com/59442344/115105523-757f7780-9f9a-11eb-8d91-8a90054876d4.png)
+
+## 실험 결과
+<img src="https://user-images.githubusercontent.com/59442344/115107415-aca75600-9fa5-11eb-8667-a69c976e3a20.png" width=70% height=70%>
