@@ -1,11 +1,11 @@
 #include "BinarySearchTree.h"
 
-// BST ÃÊ±âÈ­
+// BST ì´ˆê¸°í™”
 void InitBST(BTNode** pRoot) {
 	*pRoot = NULL;
 }
 
-// BST ÀÔ·Â
+// BST ì…ë ¥
 int BSTInsert(BTNode** pRoot) {
 
 	char name[23], region[42];
@@ -14,7 +14,7 @@ int BSTInsert(BTNode** pRoot) {
 	BTNode* cNode = *pRoot;
 	BTNode* pNode = NULL;
 
-	// µ¥ÀÌÅÍ ÀÔ·Â¹Ş±â
+	// ë°ì´í„° ì…ë ¥ë°›ê¸°
 	printf(INSERTMSG);
 	printf(INSERTNAMEMSG);
 	scanf_s("%s", name, 23); while (getchar() != '\n') {}
@@ -23,13 +23,13 @@ int BSTInsert(BTNode** pRoot) {
 	printf(INSERTREGION);
 	scanf_s("%s", region, 42); while (getchar() != '\n') {}
 
-	// ÀÌ»óÇÑ name ÀÔ·Â Á¦°Å
+	// ì´ìƒí•œ name ì…ë ¥ ì œê±°
 	if (name[0] == 0) {
 		printf(INSERTINVALIDNAMEERRMSG);
 		return FALSE;
 	}
 
-	// Áßº¹ nameÀÏ °æ¿ì Å»Ãâ + pNode À§Ä¡ Ã£±â
+	// ì¤‘ë³µ nameì¼ ê²½ìš° íƒˆì¶œ + pNode ìœ„ì¹˜ ì°¾ê¸°
 	while (cNode !=NULL) {
 		if (strcmp(cNode->name, name) == 0) {
 			printf(INSERTDUPLICATEERRMSG);
@@ -45,18 +45,18 @@ int BSTInsert(BTNode** pRoot) {
 		}
 	}
 
-	// »õ·Î¿î ³ëµå »ı¼º
+	// ìƒˆë¡œìš´ ë…¸ë“œ ìƒì„±
 	BTNode* newNode = makeBTNode();
 	setBTNode(newNode, name, region, date);
 	
-	// ·çÆ® ³ëµåÀÏ °æ¿ì¿¡ ´ëÇÑ Ã³¸®
+	// ë£¨íŠ¸ ë…¸ë“œì¼ ê²½ìš°ì— ëŒ€í•œ ì²˜ë¦¬
 	if (pNode == NULL) {
 		*pRoot = newNode;
 		printf(INSERTOKMSG);
 		return TRUE;
 	}
 
-	// ·çÆ® ³ëµå°¡ ¾Æ´Ò °æ¿ì¿¡ ´ëÇÑ Ã³¸®
+	// ë£¨íŠ¸ ë…¸ë“œê°€ ì•„ë‹ ê²½ìš°ì— ëŒ€í•œ ì²˜ë¦¬
 	if (strcmp(pNode->name, name) > 0) {
 		setLeftSubTree(pNode, newNode);
 	}
@@ -68,14 +68,14 @@ int BSTInsert(BTNode** pRoot) {
 	return TRUE;
 }
 
-// BST Å½»ö -> Ãâ·Â
+// BST íƒìƒ‰ -> ì¶œë ¥
 void BSTPrint(BTNode** pRoot) {
 
 	BTNode* targetNode;
 	char name[23];
 	name[0] = 0;
 
-	// µ¥ÀÌÅÍ ÀÔ·Â¹Ş±â
+	// ë°ì´í„° ì…ë ¥ë°›ê¸°
 	printf(SEARCHMSG);
 	printf(SEARCHINPUTNAMEMSG);
 	scanf_s("%s", name, 23); while (getchar() != '\n') {}
@@ -87,13 +87,13 @@ void BSTPrint(BTNode** pRoot) {
 
 	targetNode = BSTSearch(pRoot, name);
 
-	// ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø´Ù¸é
+	// ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ë‹¤ë©´
 	if (targetNode == NULL) {
 		printf(SEARCHINVALIDNONAMEERRMSG);
 		return;
 	}
 
-	// ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ÀÖ´Ù¸é
+	// ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ìˆë‹¤ë©´
 	printf(SEARCHOKMSG);
 	printf(PRINTNAMEMSG, targetNode->name);
 	printf(PRINTDATEMSG, targetNode->date);
@@ -101,12 +101,12 @@ void BSTPrint(BTNode** pRoot) {
 	return;
 }
 
-// BST Å½»ö
+// BST íƒìƒ‰
 BTNode* BSTSearch(BTNode** pRoot, char *tName) {
 	
 	BTNode* cNode = *pRoot;
 
-	// name Á¤º¸°¡ ÀÏÄ¡ÇÏ´Â nodeÀÇ À§Ä¡ Ã£±â
+	// name ì •ë³´ê°€ ì¼ì¹˜í•˜ëŠ” nodeì˜ ìœ„ì¹˜ ì°¾ê¸°
 	while (cNode != NULL) {
 		if (strcmp(cNode->name, tName) == 0) {
 			return cNode;
@@ -117,23 +117,23 @@ BTNode* BSTSearch(BTNode** pRoot, char *tName) {
 			cNode = getLeftSubTree(cNode);
 	}
 
-	// name Á¤º¸°¡ ÀÏÄ¡ÇÏ´Â node°¡ ¾øÀ¸¸é ¿¹¿ÜÃ³¸®
+	// name ì •ë³´ê°€ ì¼ì¹˜í•˜ëŠ” nodeê°€ ì—†ìœ¼ë©´ ì˜ˆì™¸ì²˜ë¦¬
 	return NULL;
 
 }
 
-// BST »èÁ¦
+// BST ì‚­ì œ
 BTNode* BSTDelete(BTNode** pRoot) {
 	
-	// °¡»ó ·çÆ® ³ëµå »ı¼º
+	// ê°€ìƒ ë£¨íŠ¸ ë…¸ë“œ ìƒì„±
 	BTNode* pVRoot = makeBTNode();
 	pVRoot->rsub = *pRoot;
 	BTNode* pNode = pVRoot;
 	BTNode* cNode = *pRoot;
-	// dNode´Â ¾Æ¿ôµÈ node¸¦ Ã³¸®ÇØÁÖ±â À§ÇØ ¸¸µç Æ÷ÀÎÅÍÀÌ´Ù.
+	// dNodeëŠ” ì•„ì›ƒëœ nodeë¥¼ ì²˜ë¦¬í•´ì£¼ê¸° ìœ„í•´ ë§Œë“  í¬ì¸í„°ì´ë‹¤.
 	BTNode* dNode;
 
-	// ÀÌ¸§ Á¤º¸ ÀÔ·Â ¹Ş±â
+	// ì´ë¦„ ì •ë³´ ì…ë ¥ ë°›ê¸°
 	char name[23]; name[0] = 0;
 	printf(CHANGEDATAMSG);
 	printf(CHANGEINPUTNAMEDATAMSG);
@@ -144,7 +144,7 @@ BTNode* BSTDelete(BTNode** pRoot) {
 		return NULL;
 	}
 	
-	// ÀÔ·ÂµÈ ÀÌ¸§ÀÇ À§Ä¡ Ã£±â
+	// ì…ë ¥ëœ ì´ë¦„ì˜ ìœ„ì¹˜ ì°¾ê¸°
 	while (cNode != NULL) {
 		if (strcmp(cNode->name, name) == 0)
 			break;
@@ -158,13 +158,13 @@ BTNode* BSTDelete(BTNode** pRoot) {
 		}
 	}
 
-	// ÀÔ·ÂÇÑ ÀÌ¸§°ú ÀÏÄ¡ÇÏ´Â ÀÌ¸§ÀÌ ¾ø´Ù¸é
+	// ì…ë ¥í•œ ì´ë¦„ê³¼ ì¼ì¹˜í•˜ëŠ” ì´ë¦„ì´ ì—†ë‹¤ë©´
 	if (cNode == NULL) {
 		printf(CHANGEINVALIDDATAERRMSG);
 		return NULL;
 	}
 
-	// 1. pNodeÀÇ ´Ü¸»³ëµå°¡ 0°³ÀÎ °æ¿ì
+	// 1. pNodeì˜ ë…¸ë“œê°€ 0ê°œì¸ ê²½ìš°
 	if ((getLeftSubTree(cNode) == NULL) && (getRightSubTree(cNode) == NULL)) {
 		if (getLeftSubTree(pNode) == cNode) {
 			dNode = deleteLeftSubTree(pNode);
@@ -174,12 +174,12 @@ BTNode* BSTDelete(BTNode** pRoot) {
 		}
 	}
 
-	// 2. pNodeÀÇ ´Ü¸»³ëµå°¡ 1°³ÀÎ °æ¿ì
+	// 2. pNodeì˜ ìì‹ë…¸ë“œê°€ 1ê°œì¸ ê²½ìš°
 	else if ((getLeftSubTree(cNode) == NULL) || (getRightSubTree(cNode) == NULL)) {
 		BTNode* dcNode;
 		dNode = cNode;
 		
-		// cNodeÀÇ ¿ŞÂÊ¿¡ ÀÚ½ÄÀÌ ÀÖ´Â°¡ ¿À¸¥ÂÊ¿¡ ÀÚ½ÄÀÌ ÀÖ´Â°¡
+		// cNodeì˜ ì™¼ìª½ì— ìì‹ì´ ìˆëŠ”ê°€ ì˜¤ë¥¸ìª½ì— ìì‹ì´ ìˆëŠ”ê°€
 		if (getLeftSubTree(cNode) != NULL) {
 			dcNode = getLeftSubTree(cNode);
 		}
@@ -187,7 +187,7 @@ BTNode* BSTDelete(BTNode** pRoot) {
 			dcNode = getRightSubTree(cNode);
 		}
 
-		// pNode¿¡ dcNodeºÙÀÌ±â
+		// pNodeì— dcNodeë¶™ì´ê¸°
 		if (getLeftSubTree(pNode) == cNode) {
 			setLeftSubTree(pNode, dcNode);
 		}
@@ -196,7 +196,7 @@ BTNode* BSTDelete(BTNode** pRoot) {
 		}
 	}
 
-	// 3. pNodeÀÇ ´Ü¸»³ëµå°¡ 2°³ÀÎ °æ¿ì
+	// 3. pNodeì˜ ìì‹ë…¸ë“œê°€ 2ê°œì¸ ê²½ìš°
 	else {
 		dNode = cNode;
 		while (getLeftSubTree(cNode) != NULL) {
@@ -205,37 +205,37 @@ BTNode* BSTDelete(BTNode** pRoot) {
 		}
 
 		setBTNode(dNode, cNode->name, cNode->region, cNode->date);
-		// º¯°æ ´ë»óÀ» Ã£¾Æ ³»·Á°¡Áö ¾Ê¾Ò´Ù¸é
+		// ë³€ê²½ ëŒ€ìƒì„ ì°¾ì•„ ë‚´ë ¤ê°€ì§€ ì•Šì•˜ë‹¤ë©´
 		if (getRightSubTree(pNode) == cNode) {
 			setRightSubTree(pNode, getRightSubTree(cNode));
 		}
-		// º¯°æ ´ë»óÀ» Ã£¾Æ ³»·Á°¬´Ù¸é
+		// ë³€ê²½ ëŒ€ìƒì„ ì°¾ì•„ ë‚´ë ¤ê°”ë‹¤ë©´
 		else {
 			setLeftSubTree(pNode, getRightSubTree(cNode));
 		}
 
-		// È¦·Î³²Àº nodeÀÎ cNode¸¦ dNode·Î Ã³¸®ÇØÁà¾ß ÇÑ´Ù!
+		// í™€ë¡œë‚¨ì€ nodeì¸ cNodeë¥¼ dNodeë¡œ ì²˜ë¦¬í•´ì¤˜ì•¼ í•œë‹¤!
 		dNode = cNode;
 	}
 
-	// ·çÆ® ³ëµå°¡ ¹Ù²î¾î¹ö·È´Ù¸é, »õ·Î ¹Ù²ï ·çÆ® ³ëµå¸¦ ·çÆ®³ëµå·Î ÀÎÁ¤ÇØÁà¾ßÇÑ´Ù!
+	// ë£¨íŠ¸ ë…¸ë“œê°€ ë°”ë€Œì–´ë²„ë ¸ë‹¤ë©´, ìƒˆë¡œ ë°”ë€ ë£¨íŠ¸ ë…¸ë“œë¥¼ ë£¨íŠ¸ë…¸ë“œë¡œ ì¸ì •í•´ì¤˜ì•¼í•œë‹¤!
 	if (getRightSubTree(pVRoot) != *pRoot) {
 		*pRoot = getRightSubTree(pVRoot);
 	}
 
-	// »ı¼ºÇØÁá´ø ÀÓÀÇÀÇ °¡»ó root node´Â ÇØÁ¦ÇØ ÁÖÀÚ.
+	// ìƒì„±í•´ì¤¬ë˜ ì„ì˜ì˜ ê°€ìƒ root nodeëŠ” í•´ì œí•´ ì£¼ì.
 	free(pVRoot);
 	printf(CANCELOKMSG);
 	return dNode;
 }
 
-// BST º¯°æ
+// BST ë³€ê²½
 void BSTChange(BTNode** pRoot) {
 
 	char name[23], data[50];
 	BTNode* targetNode;
 
-	// µ¥ÀÌÅÍ ÀÔ·Â¹Ş±â
+	// ë°ì´í„° ì…ë ¥ë°›ê¸°
 	printf(CHANGEDATAMSG);
 	printf(CHANGEINPUTNAMEDATAMSG);
 	scanf_s("%s", name, 23); while (getchar() != '\n') {}
@@ -243,18 +243,18 @@ void BSTChange(BTNode** pRoot) {
 
 	targetNode = BSTSearch(pRoot, name);
 
-	// ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø´Ù¸é
+	// ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ë‹¤ë©´
 	if (targetNode == NULL) {
 		printf(CHANGEINVALIDDATAERRMSG);
 		return;
 	}
 
-	// ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ°¡ ÀÖ´Ù¸é
-	// ³¯Â¥ µ¥ÀÌÅÍ¸¦ ÀÔ·Â¹Ş¾Ò´Ù¸é
+	// ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ê°€ ìˆë‹¤ë©´
+	// ë‚ ì§œ ë°ì´í„°ë¥¼ ì…ë ¥ë°›ì•˜ë‹¤ë©´
 	if (data[0] >= '0' && data[0] <= '9') {
 		targetNode->date = atoi(data);
 	}
-	// Áö¿ª µ¥ÀÌÅÍ¸¦ ÀÔ·Â¹Ş¾Ò´Ù¸é
+	// ì§€ì—­ ë°ì´í„°ë¥¼ ì…ë ¥ë°›ì•˜ë‹¤ë©´
 	else {
 		strcpy_s(targetNode->region, 42, data);
 	}
