@@ -1,6 +1,6 @@
 #include "ALGraphBFS.h"
 
-// Á¤·Ä ÇÔ¼ö
+// ì •ë ¬ í•¨ìˆ˜
 int WhoIsPrecede(int d1, int d2) {
 	if (d1 < d2)
 		return 0;
@@ -8,7 +8,7 @@ int WhoIsPrecede(int d1, int d2) {
 		return 1;
 }
 
-// Graph ÃÊ±âÈ­
+// Graph ì´ˆê¸°í™”
 void GraphInit(ALGraph* pg, int nv) {
 
 	pg->numE = 0;
@@ -21,12 +21,12 @@ void GraphInit(ALGraph* pg, int nv) {
 	for (int i = 0; i < nv; ++i) {
 		ListInit(&(pg->adjList[i]));
 		SetSortRule(&(pg->adjList[i]), WhoIsPrecede);
-		// list¿¡ µé¾îÀÖ´Â Ç×¸ñµéÀ» ¿¹»Ú°Ô Ãâ·ÂÇØÁÜ
+		// listì— ë“¤ì–´ìˆëŠ” í•­ëª©ë“¤ì„ ì˜ˆì˜ê²Œ ì¶œë ¥í•´ì¤Œ
 	}
 
 }
 
-// Graph ¸®¼Ò½º ÇØÁ¦
+// Graph ë¦¬ì†ŒìŠ¤ í•´ì œ
 void GraphDestroy(ALGraph* pg) {
 	if (pg->adjList != NULL) {
 		free(pg->adjList);
@@ -36,21 +36,21 @@ void GraphDestroy(ALGraph* pg) {
 	}
 }
 
-// °£¼±ÀÇ Ãß°¡
+// ê°„ì„ ì˜ ì¶”ê°€
 void AddEdge(ALGraph* pg, int fromV, int toV) {
-	// ¾ç¹æÇâ ¿¬°á¸®½ºÆ®ÀÌ¹Ç·Î, ¾ç¹æÇâ ¸ğµÎ¿¡ Ãß°¡ÇØÁÖ¾î¾ß ÇÑ´Ù.
+	// ì–‘ë°©í–¥ ì—°ê²°ë¦¬ìŠ¤íŠ¸ì´ë¯€ë¡œ, ì–‘ë°©í–¥ ëª¨ë‘ì— ì¶”ê°€í•´ì£¼ì–´ì•¼ í•œë‹¤.
 	LInsert(&(pg->adjList[fromV]), toV);
 	LInsert(&(pg->adjList[toV]), fromV);
 	pg->numE += 1;
 }
 
-// °£¼±ÀÇ Á¤º¸ Ãâ·Â
+// ê°„ì„ ì˜ ì •ë³´ ì¶œë ¥
 void ShowGraphEdgeInfo(ALGraph* pg) {
 
 	LData tmpData;
 
 	for (int i = 0; i < pg->numV; ++i) {
-		printf("%c¿Í ¿¬°áµÈ Á¤Á¡ : ", i + 65);
+		printf("%cì™€ ì—°ê²°ëœ ì •ì  : ", i + 65);
 		if (LFirst(&(pg->adjList[i]), &tmpData)) {
 			printf("%c ", tmpData + 65);
 			while (LNext(&(pg->adjList[i]), &tmpData))
@@ -60,7 +60,7 @@ void ShowGraphEdgeInfo(ALGraph* pg) {
 	}
 }
 
-// Á¤Á¡µé¿¡ ¹æ¹®ÇÏ´Â °Í°ú °ü·ÃµÈ ÇÔ¼ö
+// ì •ì ë“¤ì— ë°©ë¬¸í•˜ëŠ” ê²ƒê³¼ ê´€ë ¨ëœ í•¨ìˆ˜
 int VisitVertex(ALGraph* pg, int visitV) {
 	if (pg->visitInfo[visitV] == 0) {
 		pg->visitInfo[visitV] = 1;
@@ -70,7 +70,7 @@ int VisitVertex(ALGraph* pg, int visitV) {
 	return FALSE;
 }
 
-// DFS ±â¹İÀÇ Á¤Á¡µé Ãâ·Â. (½ÃÀÛÁ¡¿¡ µû¶ó¼­)
+// BFS ê¸°ë°˜ì˜ ì •ì ë“¤ ì¶œë ¥. (ì‹œì‘ì ì— ë”°ë¼ì„œ) : queueì™€ arrayë¥¼ ì´ìš©í•œë‹¤
 void BFSShowGraphVertex(ALGraph* pg, int startV) {
 	
 	Queue queue;
@@ -99,7 +99,7 @@ void BFSShowGraphVertex(ALGraph* pg, int startV) {
 
 	}
 
-	// ³ª¾Æ-Áß¿¡ ´Ù½Ã ¾µ ¶§¸¦ À§ÇÑ memset
+	// ë‚˜ì•„-ì¤‘ì— ë‹¤ì‹œ ì“¸ ë•Œë¥¼ ìœ„í•œ memset
 	memset(pg->visitInfo, 0, (sizeof(int)) * (pg->numV));
 
 }
