@@ -30,7 +30,7 @@ void AddEdge(ALGraph* pg, int fromV, int toV);
 // 간선의 정보 출력
 void ShowGraphEdgeInfo(ALGraph* pg);
 
-// FS 기반의 정점들 출력. (시작점에 따라서)
+// BFS 기반의 정점들 출력. (시작점에 따라서)
 void BFSShowGraphVertex(ALGraph* pg, int startV);
 
 #endif
