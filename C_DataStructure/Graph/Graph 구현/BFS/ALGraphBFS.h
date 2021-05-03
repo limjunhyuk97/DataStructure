@@ -4,7 +4,7 @@
 #include "DLinkedList.h"
 #include "CircularQueue.h"
 
-// enumÀÇ »ç¿ë
+// enumì˜ ì‚¬ìš©
 enum { A, B, C, D, E, F, G, H, I, J };
 
 // Undirected graph based on Adjacent List. 
@@ -13,24 +13,24 @@ typedef struct _ual {
 	int numE;
 	List* adjList;
 
-	// ¹æ¹® ¿©ºÎ¸¦ Çì´õÆÄÀÏ¿¡ ´ã¾Æ¹ö·È´Ù.
+	// ë°©ë¬¸ ì—¬ë¶€ë¥¼ í—¤ë”íŒŒì¼ì— ë‹´ì•„ë²„ë ¸ë‹¤.
 	int* visitInfo;
 
 }ALGraph;
 
-// Graph ÃÊ±âÈ­
+// Graph ì´ˆê¸°í™”
 void GraphInit(ALGraph* pg, int nv);
 
-// Graph ¸®¼Ò½º ÇØÁ¦
+// Graph ë¦¬ì†ŒìŠ¤ í•´ì œ
 void GraphDestroy(ALGraph* pg);
 
-// °£¼±ÀÇ Ãß°¡
+// ê°„ì„ ì˜ ì¶”ê°€
 void AddEdge(ALGraph* pg, int fromV, int toV);
 
-// °£¼±ÀÇ Á¤º¸ Ãâ·Â
+// ê°„ì„ ì˜ ì •ë³´ ì¶œë ¥
 void ShowGraphEdgeInfo(ALGraph* pg);
 
-// DFS ±â¹İÀÇ Á¤Á¡µé Ãâ·Â. (½ÃÀÛÁ¡¿¡ µû¶ó¼­)
+// FS ê¸°ë°˜ì˜ ì •ì ë“¤ ì¶œë ¥. (ì‹œì‘ì ì— ë”°ë¼ì„œ)
 void BFSShowGraphVertex(ALGraph* pg, int startV);
 
 #endif
