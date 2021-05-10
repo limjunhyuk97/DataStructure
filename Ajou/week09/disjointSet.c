@@ -22,7 +22,7 @@ void Union(int n, int m, disjointSet *set) {
 
 void PrintAllRoot(disjointSet* set) {
 	for (int i = 1; i < MAX_LEN; ++i) {
-		printf("³ëµå %dÀÇ root´Â %d\n", i, Find(i, set));
+		printf("ë…¸ë“œ %dì˜ rootëŠ” %d\n", i, Find(i, set));
 	}
 }
 
