@@ -4,8 +4,8 @@ void PQEdgeInit(PQ* pq) {
 	pq->newpos = 1;
 }
 
-// cNode°¡ ´õ Å©¸é Criteria > 0 OK
-// pNode°¡ ´õ Å©¸é Criteria < 0 NO
+// cNodeê°€ ë” í¬ë©´ Criteria > 0 OK
+// pNodeê°€ ë” í¬ë©´ Criteria < 0 NO
 int Criteria(int pNode, int cNode) {
 	return cNode - pNode;
 }
@@ -22,8 +22,8 @@ int ParentIndex(int node) {
 	return node / 2;
 }
 
-// parentÀÇ ¼ö°¡ ´õ Å©¸é return < 0 No 
-// childÀÇ ¼ö°¡ ´õ Å©¸é return > 0 OK
+// parentì˜ ìˆ˜ê°€ ë” í¬ë©´ return < 0 No 
+// childì˜ ìˆ˜ê°€ ë” í¬ë©´ return > 0 OK
 int CompParentChild(Data parent, Data child) {
 	return Criteria(parent.cost, child.cost);
 }
