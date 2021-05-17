@@ -1,5 +1,4 @@
 #include "graph.h"
-#define INPUTV1MSG ""
 
 Graph graph;
 SPath spath;
