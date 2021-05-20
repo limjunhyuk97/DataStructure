@@ -4,9 +4,9 @@
 #define MAXLEN 10
 #define TRUE 1
 #define FALSE 0
-#define INPUTDSTVMSG "µµÂø vertex¸¦ ÀÔ·ÂÇÏ¼¼¿ä : "
-#define PRINTPLENMSG "Vertex %d¹ø¿¡¼­ Vertex %d¹ø±îÁö shortest pathÀÇ ±æÀÌ´Â %dÀÔ´Ï´Ù.\n"
-#define PRINTCYCLE "Graph¿¡ cycleÀÌ ÀÖ½À´Ï´Ù.\n"
+#define INPUTDSTVMSG "ë„ì°© vertexë¥¼ ìž…ë ¥í•˜ì„¸ìš” : "
+#define PRINTPLENMSG "Vertex %dë²ˆì—ì„œ Vertex %dë²ˆê¹Œì§€ shortest pathì˜ ê¸¸ì´ëŠ” %dìž…ë‹ˆë‹¤.\n"
+#define PRINTCYCLE "Graphì— cycleì´ ìžˆìŠµë‹ˆë‹¤.\n"
 #define MIN(i, j) (i > j ? j : i)
 
 typedef struct Graph {
