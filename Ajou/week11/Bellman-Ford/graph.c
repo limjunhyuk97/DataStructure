@@ -28,9 +28,9 @@ int bellmanFord(Graph* graph, int src) {
 	for (int i = 0; i < graph->numV; ++i)
 		graph->dist[i] = graph->arr[src][i];
 
-	// i´Â path °¹¼ö°¡ 2ºÎÅÍ ÃÖ´ë (vetex°¹¼ö - 1)±îÁöÀÇ °æ¿ì¸¦ counting ÇÏ´Â °Í 
+	// iëŠ” path ê°¯ìˆ˜ê°€ 2ë¶€í„° ìµœëŒ€ (vetexê°¯ìˆ˜ - 1)ê¹Œì§€ì˜ ê²½ìš°ë¥¼ counting í•˜ëŠ” ê²ƒ 
 	for (int i = 2; i <= (graph->numV - 1); ++i) {
-		// j vertex·Î ÇâÇÏ´Â edgeµé¿¡ ´ëÇØ¼­ ¿¬»ê
+		// j vertexë¡œ í–¥í•˜ëŠ” edgeë“¤ì— ëŒ€í•´ì„œ ì—°ì‚°
 		for (int j = 0; j < graph->numV; ++j) {
 			for (int k = 0; k < graph->numV; ++k) {
 				if (graph->direct[k][j] == TRUE)
