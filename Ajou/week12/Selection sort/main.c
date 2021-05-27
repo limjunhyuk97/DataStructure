@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define BEFORESELSORTMSG "а╓╥дгр ╣╔юлем:"
+#define BEFORESELSORTMSG "Л═∙К═╛М∙═ К█╟Л²╢М└╟:"
 #define AFTERSELSORTMSG "Selection Sort:"
 
 void swap(int* n, int* m) {
