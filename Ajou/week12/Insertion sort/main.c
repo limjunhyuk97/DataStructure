@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define BEFOREINSSORTMSG "а╓╥дгр ╣╔юлем:"
+#define BEFOREINSSORTMSG "Л═∙К═╛М∙═ К█╟Л²╢М└╟:"
 #define AFTERINSSORTMSG "Insertion Sort:"
 
 void printArr(int arr[], int n) {
