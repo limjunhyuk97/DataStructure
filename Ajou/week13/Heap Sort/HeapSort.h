@@ -7,7 +7,7 @@
 #define TRUE 1
 #define FALSE 0
 
-#define BEFORESORT "Á¤·ÄÇÒ µ¥ÀÌÅÍ:"
+#define BEFORESORT "ì •ë ¬í•  ë°ì´í„°:"
 #define AFTERSORT "Heap Sort:"
 
 typedef int Data;
