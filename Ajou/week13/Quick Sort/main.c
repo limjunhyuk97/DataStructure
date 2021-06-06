@@ -37,7 +37,7 @@ void quickSort(int arr[], int start, int end) {
 
 int main(void) {
 
-	printf("Á¤·ÄÇÒ µ¥ÀÌÅÍ:");
+	printf("ì •ë ¬í•  ë°ì´í„°:");
 	for (int i = 0; i < sizeof(arr) / sizeof(int); ++i)
 		printf(" %d", arr[i]);
 	printf("\n\n");
