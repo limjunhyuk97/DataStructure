@@ -7,7 +7,7 @@
 
 ## Bellman-Ford 구현 코드(cpp)
 
-### 시작 vertex와 vertex 수를 input으로 받는다.
+### 1. 시작 vertex와 vertex 수를 input으로 받는다.
 
 ```cpp
 int Bellman_Ford(int s, int v) {
@@ -51,3 +51,10 @@ int Bellman_Ford(int s, int v) {
 
 }
 ```
+
+### 2. 시작 위치에 따라 cycle이 감지될 수도, 되지 않을 수도 있다.
+  - 아래와 같은 경우, 시작 지점이 2, 1, 3의 경우 cycle이 탐지된다.
+  - 반면 4의 경우 cycle을 탐지할 수 없다.
+  
+<img src="https://user-images.githubusercontent.com/59442344/126627129-9b2d5a4d-0646-4d01-aa88-da44895c2fc5.png" width = 40% height = 40%>
+
