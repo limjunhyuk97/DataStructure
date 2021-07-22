@@ -1,6 +1,7 @@
 # Dijkstra
   - 음의 가중치가 없는, 가중치 그래프에서 특정 정점으로부터 다른 정점들까지의 최소 거리를 구하는데 사용한다.
   - greedy algorithm이 적용된다.
+  - priority_queue를 이용하여 구현한다면, 시간복잡도 O(E\*logV)를 갖게 된다. : E만큼의 edge 꺼내고, logV의 복잡도로 vertex에 접근한다.
 
 ## Dijkstra 구현 코드(cpp)
 
