@@ -66,7 +66,10 @@
 
 <p align="center"><img src="https://user-images.githubusercontent.com/59442344/157672002-a3565cde-0f5e-49a6-b521-53b4e58766b7.png" width="80%"></p>
 
-- **H-factor** : 
+- **G의 H-factor F** : (1) F가 G의 spanning subgraph, (2) F의 각 connected component가 H와 isomorphic 한 것.
+  - 아래의 그래프에서 edge 12, 23, 46, 45를 edge로 갖는 spanning subgraph를 만들면 P3-Factor가 된다.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/59442344/157879193-295d8d63-4da2-4c49-ab24-526fecef7241.png" width="50%"></p>
 
 - **k-factor of G** : 정수 k에 대해 그래프 G의 spanning subgraph 중 k-regular 인 것.
 
@@ -106,11 +109,11 @@
 
 ## 03. 특별한 Graph
 
-- **complete graph Kn** : 모든 vertex 가 서로 다 연결된 graph
-- **cycle Cn** : 정다각형 그래프
-- **Wheel Wn** : 모든 vertex와 연결된 vertex가 존재하는 graph
-- **Path Pn** : 모든 vertex 차수가 2 이하인 Tree
-- **Hypercube Qn** : vertex는 0과 1로 이루어진 sequence, edge는 sequence에서 digit 하나만 다른 경우 연결된 형태의 graph
+- **complete graph Kn** : 모든 vertex 가 서로 다 연결된 graph (vertex : n)
+- **cycle Cn** : 정다각형 그래프 (vertex : n)
+- **Wheel Wn** : 모든 vertex와 연결된 vertex가 존재하는 graph (vertex : n+1)
+- **Path Pn** : 모든 vertex 차수가 2 이하인 Tree (vertex : n)
+- **Hypercube Qn** : vertex는 0과 1로 이루어진 sequence, edge는 sequence에서 digit 하나만 다른 경우 연결된 형태의 graph (자릿수 : n)
 - **bipartite** : vertex 집합이 v1, v2 disjoint set으로 쪼개져 있고, 모든 edge는 v1의 원소와 v2의 원소를 잇고 있는 형태의 graph
   - **complete bipartite graph Km,n** : 다른 파트의 vertex들 간에 빠짐없이 짝을 이루어 연결되어 있는 bipartite graph
 
