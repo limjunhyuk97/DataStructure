@@ -40,7 +40,7 @@
 
 - **neighborhood NG(v)** : vertex v와 edge로 연결된 vertex 집합
 
-- **closded neighborhood NG[v]** : NG(v) U {v}
+- **closed neighborhood NG[v]** : NG(v) U {v}
 
 - **degree degG(v)** : (V, E) 의 E집합에서 원소 v의 frequency
   - **minimum degree δ(G)** : minimum degree of G
@@ -57,7 +57,7 @@
 
 - **subgraph H** : V (H) ⊂ V (G) / E(H) ⊂ E(G)
   - **spanning subgraph H** : V (H) = V (G) / E(H) ⊂ E(G)
-  - **induced subgraph H** : V (H) ⊂ V (G) / u,v ∈ V(H) and uv ∈ E(G)
+  - **induced subgraph H** : V (H) ⊂ V (G) / E(H) = {e ∈ E(G)|e ⊂ S}. 
   - example
     - G1, G2, G3 는 G 의 subgraph
     - G2, G3 는 G의 induced subgraph
