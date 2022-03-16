@@ -33,6 +33,7 @@
 - **loop** : 오직 하나의 vertex와 연결된 edge
 
 - **simple graph** : loop, multiple edge 가 없는 graph
+  - simple graph의 walk, path는 vertex의 sequence로 적을 수 있다.
 
 - **isomorphic** : vertex 수와 edge 수가 같고, 동일한 edge connectivity를 갖는 graph 관계
 
